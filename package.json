@@ -1,0 +1,13 @@
+{
+  "name": "your-app",
+  "version": "0.1.0",
+  "main": "main.js",
+
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  },
+  "scripts": {
+        "start": "electron ."
+    }
+}
+
