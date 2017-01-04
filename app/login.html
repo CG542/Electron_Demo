@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="login.js"></script>
+</head>
+
+<body  padding-top="100px">
+
+    <div class="container" align="center" >
+        <div class="row" align="center">
+            <div class="col-md-12">
+                <h1>Login</h1>
+            </div>
+        </div>
+        <div class="row white">
+            <div class="col-md-12">
+                <div class="col-lg-12 col-lg-offset-2">
+                    <form id="loginform" class="form" role="form">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <input class="form-control" id="name" name="name" placeholder="Name" type="text" required />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <input class="form-control" id="password" name="password" placeholder="Password" type="password" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <button class="btn btn-lg btn-success" onclick="login()">Login</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</body>
+
+</html>

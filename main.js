@@ -10,14 +10,15 @@ let win;
 
 function createWindow() {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600});
+  win = new BrowserWindow({ width: 400, height: 600 });
 
   // and load the index.html of the app.
-  win.loadURL(`file://${__dirname}/app/index.html`);
+  win.loadURL(`file://${__dirname}/app/login.html`);
 
   // Open the DevTools.
   win.webContents.openDevTools();
 
+  win.setMenuBarVisibility(false);
   // Emitted when the window is closed.
   win.on('closed', () => {
     // Dereference the window object, usually you would store windows
@@ -52,7 +53,16 @@ app.on('activate', () => {
 
 
 const ipc = electron.ipcMain;
-ipc.on('window-all-closed',function () {
-    app.quit();
+ipc.on('login-success', function () {
+
+  win.hide();
+  
+  win = new BrowserWindow({ width: 800, height: 600 });
+  // and load the index.html of the app.
+  win.loadURL(`file://${__dirname}/app/main.html`);
+
+  win.setMenuBarVisibility(false);
+
+
 });
 
